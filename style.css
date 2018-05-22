@@ -1,0 +1,30 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/af/48/0b/af480beae0c5d3ca4968b877527d7615.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+
+#listeEntiere{
+
+    border-width: 3px;
+    border-radius : 5px;
+    width: 75%;
+    margin : 0 auto;
+    border-style: solid;
+    border-color: #ffffff;
+}
+
+#listeEntiere .container .row .col-sm #ListeElements li{
+
+    list-style: none;
+
+}
+
+
+#listeEntiere .container .row .col-sm #ListeElements li a{
+
+    padding : 0 auto;
+    text-decoration: none;
+    color : #ffffff;
+}
