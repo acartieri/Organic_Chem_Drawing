@@ -1,0 +1,13 @@
+li{
+    list-style: none;
+    
+}
+
+ul{
+    font-size : 20px;
+}
+
+ul:hover{
+    font-size : 22px;
+    color : #db2020;
+}

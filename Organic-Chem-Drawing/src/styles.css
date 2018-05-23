@@ -6,4 +6,14 @@ body{
     background-size: 100%;
     
 }
- 
+
+div {
+    border-width: 3px;
+    border-radius : 10px;
+    margin : 0 auto;
+    width: 75%;
+    border-style: solid;
+    border-color: #ffffff;
+    text-align: center;
+    
+}

@@ -1,3 +1,25 @@
-<ul *ngFor="let orga of elements">
-  <li>{{orga.nom}}</li>
-</ul>
+<html>
+
+<head>
+</head>
+
+<body>
+  <div>
+    <ul *ngFor="let orga of elements">
+      <li>{{orga.nom|uppercase}}, {{orga.formule}}
+        <button (click)="editElement(orga.id)">Edit</button>
+      </li>
+
+
+    </ul>
+  </div>
+
+  <input [(ngModel)]="element.nom" placeholder="Ajouter nom">
+  <input [(ngModel)]="element.formule" placeholder="Ajouter formule brute">
+  <button (click)="addElement()" *ngIf="!edit">Add</button>
+  <button (click)="editOver()" *ngIf="edit">Modify</button>
+
+
+</body>
+
+</html>
