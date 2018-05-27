@@ -4,21 +4,72 @@
 </head>
 
 <body>
-  <div>
+
+<h1 id="title">Liste complète</h1>
+
+<div id="container">
+  <div id="tableau">
+    <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th id="name" scope="col">Nom</th>
+            <th id="fbrut" scope="col">Formule brute</th>
+            <th id="dens" scope="col">Densité</th>
+            <th id="mm" scope="col">Masse molaire (g.mol<sup>-1</sup>)</th>
+            <th id="cas" scope="col">N°CAS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <li *ngFor="let orga of elements"><a [routerLink]="['/element', orga.id]">{{orga.nom|uppercase}}</a></li>
+            </th>
+            <td>
+              <li id="formul" *ngFor="let orga of elements"><a [innerHtml]="orga.formule|chemical"></a></li>
+            </td>
+            <td><li id="density" *ngFor="let orga of elements">{{orga.densite}}</li></td>
+            <td>
+                <li id="mass" *ngFor="let orga of elements">{{orga.masseMolaire}}</li>
+              </td>
+            <td>
+                <li id="cas"  *ngFor="let orga of elements" >{{orga.cas}}</li>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <!--
+
+    <div id="ajout">
+    <input [(ngModel)]="element.nom" placeholder="Nom"><br>
+    <input [(ngModel)]="element.formule" placeholder="Formule brute"><br>
+    <input [(ngModel)]="element.densite" placeholder="Densité"><br>
+    <input [(ngModel)]="element.masseMolaire" placeholder="Masse molaire"><br>
+    <input [(ngModel)]="element.cas" placeholder="N°CAS"><br>
+    <button (click)="addElement()" *ngIf="!edit">Add</button>
+    <button (click)="editOver()" *ngIf="edit">Modify</button>
+    </div> 
+ </div>
+ 
+-->
+
+      <!--<span *ngIf="selectedElement!=null">
+        <app-element-detail [element]="selectedElement"></app-element-detail>
+      </span>
+   
+  <div id="liste">
     <ul *ngFor="let orga of elements">
-      <li>{{orga.nom|uppercase}}, {{orga.formule}}
-        <button (click)="editElement(orga.id)">Edit</button>
+      <li><a [routerLink]="['/element', orga.id]" [innerHtml]="(orga.formule|chemical) +' ' + (orga.nom|uppercase)"></a>
       </li>
-
-
+     
+          <button (click)="onSelected(orga)">Details</button>
+          <button (click)="editElement(orga.id)">Edit</button>
     </ul>
-  </div>
+  </div>-->
 
-  <input [(ngModel)]="element.nom" placeholder="Ajouter nom">
-  <input [(ngModel)]="element.formule" placeholder="Ajouter formule brute">
-  <button (click)="addElement()" *ngIf="!edit">Add</button>
-  <button (click)="editOver()" *ngIf="edit">Modify</button>
-
+  
 
 </body>
 

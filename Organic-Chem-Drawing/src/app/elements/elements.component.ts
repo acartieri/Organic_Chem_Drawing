@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Element } from '../_models';
+import { ActivatedRoute } from '@angular/router';
+import { ElementsService } from '../_service/elements.service';
 
 @Component({
   selector: 'app-elements',
@@ -16,17 +18,27 @@ export class ElementsComponent implements OnInit {
 
   edit = false;
 
-  elements = [new Element('Benzene', 'C6H6'),
-  new Element('Cyclohexane', 'C6H12'),
-  new Element('Cyclohexanone', 'C6H10O'),
-  new Element('Pyridine', 'C5H5N'),
-  new Element('Pyrrole', 'C4H5N')];
+  /*
+    elements = [new Element('Benzene', 'C6H6', 78.11, 'liquide', 0.879),
+    new Element('Cyclohexane', 'C6H12', 84.16, 'liquide', 0.779),
+    new Element('Cyclohexanone', 'C6H10O', 98.14, 'liquide', 0.946),
+    new Element('Pyridine', 'C5H5N', 79.10, 'liquide', 0.983),
+    new Element('Pyrrole', 'C4H5N', 67.09, 'liquide', 0.970)];
+    */
+  elements;
 
   element = new Element();
 
-  constructor() { }
+  selectedElement: Element;
+
+  constructor(private acivatedRoute: ActivatedRoute, private elementsService: ElementsService) { }
+
+  onSelected(e: Element): void {
+    this.selectedElement = e;
+  }
 
   ngOnInit() {
+    this.elements = this.elementsService.getElements();
   }
 
   addElement() {
@@ -34,24 +46,10 @@ export class ElementsComponent implements OnInit {
     this.element = new Element();
   }
 
-  editElement(id: number) {
+  editElement(id: string) {
     //console.log(id);
-    this.element = this.getElementById(id);
+    this.element = this.elementsService.getElementById(+id);
     this.edit = true;
-  }
-
-  getElementById(id: number): Element {
-/*
-    for (let i = 0; i < this.elements.length; i++) {
-
-      if (this.elements[i].id === id) {
-        return this.elements[i];
-      }
-
-    }
-    */
-
-   return this.elements.filter(a => a.id === id)[0];
   }
 
   editOver() {

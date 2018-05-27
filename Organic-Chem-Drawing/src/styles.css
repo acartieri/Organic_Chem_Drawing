@@ -1,19 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body{
 
-    background-image: url("https://i.pinimg.com/originals/af/48/0b/af480beae0c5d3ca4968b877527d7615.jpg");
+    background-image: url("https://szftlgs.com/wp-content/uploads/data/2018/1/8/blue-abstract-wallpaper-high-quality-For-Free-Wallpaper-PIC-WSW1074745.jpg");
     background-attachment: fixed;
     background-size: 100%;
-    
-}
-
-div {
-    border-width: 3px;
-    border-radius : 10px;
-    margin : 0 auto;
-    width: 75%;
-    border-style: solid;
-    border-color: #ffffff;
-    text-align: center;
     
 }

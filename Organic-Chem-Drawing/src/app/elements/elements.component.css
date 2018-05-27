@@ -1,13 +1,27 @@
+
+
 li{
     list-style: none;
-    
+    text-decoration: none;  
 }
 
-ul{
-    font-size : 20px;
+a{
+    color : #ffffff;
 }
 
-ul:hover{
-    font-size : 22px;
-    color : #db2020;
+h1{
+    color: rgb(230, 228, 208);
+   
+}
+
+#tableau{
+    width: 85%;
+    margin: 0;
+}
+
+
+
+#mass, #formul, #density, #name, #cas, #mm, #dens, #fbrut {
+    text-align: center;
+   
 }
