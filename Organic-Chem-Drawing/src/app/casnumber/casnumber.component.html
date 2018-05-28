@@ -1,0 +1,37 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+  <h1>Recherche à partir du n°CAS</h1>
+  <input type="text" (keyup)="searchElement()" [(ngModel)]="wordToSearch"  placeholder="N°CAS">
+  <p></p>
+  <div id="container">
+        <div id="tableau">
+          <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th id="cas" scope="col">N°CAS</th>
+                  <th id="name" scope="col">Nom</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                      <li id="cas"  *ngFor="let e of resultList" >{{e.cas}}</li>
+                      </td>
+                      <th scope="row">
+                          <li id="nom" *ngFor="let e of resultList"><a [routerLink]="['/element', e.id]">{{e.nom|uppercase}}</a></li>
+                        </th>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        
+
+    </body>
+  </html>

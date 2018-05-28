@@ -1,0 +1,47 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <h1>Recherche à partir du nom</h1>
+
+  <input type="text" (keyup)="searchElement()" [(ngModel)]="wordToSearch"  placeholder="Nom de molécule">
+  <p></p>
+  <div id="container">
+        <div id="tableau">
+          <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th id="name" scope="col">Nom</th>
+                  <th id="fbrut" scope="col">Formule brute</th>
+                  <th id="dens" scope="col">Densité</th>
+                  <th id="mm" scope="col">Masse molaire (g.mol<sup>-1</sup>)</th>
+                  <th id="cas" scope="col">N°CAS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <li  *ngFor="let e of resultList"><a [routerLink]="['/element', e.id]">{{e.nom|uppercase}}</a></li>
+                  </th>
+                  <td>
+                    <li id="formul" *ngFor="let e of resultList"><a [innerHtml]="e.formule|chemical"></a></li>
+                  </td>
+                  <td><li id="density" *ngFor="let e of resultList">{{e.densite}}</li></td>
+                  <td>
+                      <li id="mass" *ngFor="let e of resultList">{{e.masseMolaire}}</li>
+                    </td>
+                  <td>
+                      <li id="cas"  *ngFor="let e of resultList" >{{e.cas}}</li>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        
+
+    </body>
+  </html>

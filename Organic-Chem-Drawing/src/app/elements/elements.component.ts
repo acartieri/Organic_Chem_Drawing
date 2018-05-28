@@ -47,7 +47,7 @@ export class ElementsComponent implements OnInit {
   }
 
   editElement(id: string) {
-    //console.log(id);
+
     this.element = this.elementsService.getElementById(+id);
     this.edit = true;
   }

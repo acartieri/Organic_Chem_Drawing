@@ -3,10 +3,10 @@ body {
 	background : rgb(39, 36, 36);
 	margin-top: 20px;
     padding: 10px 0;
-    opacity: 0.8;
-    left: 0;
-    bottom: 0;
+	opacity: 0.8;
+	width: 100%;
 }
+
 
 p {
     padding: 15px;

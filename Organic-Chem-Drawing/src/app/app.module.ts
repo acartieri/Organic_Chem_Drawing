@@ -11,8 +11,18 @@ import { ElementsService } from './_service/elements.service';
 import { RouterModule, Routes } from '@angular/router';
 import { ElementsPageComponent } from './elements-page/elements-page.component';
 import {ChemicalPipe} from './chemical.pipe';
+import { AccueilComponent } from './accueil/accueil.component';
+import { CasnumberComponent } from './casnumber/casnumber.component';
+import { NameComponent } from './name/name.component';
+import { FormuleComponent } from './formule/formule.component';
+import { DessinComponent } from './dessin/dessin.component';
 
-const appRoutes: Routes = [{ path: 'all', component: ElementsComponent },
+const appRoutes: Routes = [{path: '', component: AccueilComponent},
+{path: 'drawing', component: DessinComponent},
+{path: 'formule', component: FormuleComponent},
+{path: 'nom', component: NameComponent},
+{path: 'cas', component: CasnumberComponent},
+{ path: 'all', component: ElementsComponent },
 { path: 'hello', component: HelloComponent },
 { path: 'element/:id', component: ElementsPageComponent}];
 
@@ -27,6 +37,11 @@ const appRoutes: Routes = [{ path: 'all', component: ElementsComponent },
     ElementDetailComponent,
     ElementsPageComponent,
     ChemicalPipe,
+    AccueilComponent,
+    CasnumberComponent,
+    NameComponent,
+    FormuleComponent,
+    DessinComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),
     BrowserModule, FormsModule

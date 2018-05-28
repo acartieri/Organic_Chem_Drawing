@@ -1,0 +1,36 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+  <h1>Recherche à partir de la formule brute</h1>
+  <input type="text" (keyup)="searchElement()" [(ngModel)]="wordToSearch"  placeholder="Formule brute">
+  <p></p>
+  <div id="container">
+        <div id="tableau">
+          <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th id="name" scope="col">Formule brute</th>
+                  <th id="fbrut" scope="col">Nom</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">
+                      <li id="formul" *ngFor="let e of resultList"><a [innerHtml]="e.formule|chemical"></a></li>
+                  </td>
+                  <th>
+                      <li  id="noms" *ngFor="let e of resultList"><a [routerLink]="['/element', e.id]">{{e.nom|uppercase}}</a></li>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        
+
+    </body>
+  </html>
