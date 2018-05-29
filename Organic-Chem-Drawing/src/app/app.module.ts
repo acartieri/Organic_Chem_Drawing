@@ -15,11 +15,14 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { CasnumberComponent } from './casnumber/casnumber.component';
 import { NameComponent } from './name/name.component';
 import { FormuleComponent } from './formule/formule.component';
-import { DessinComponent } from './dessin/dessin.component';
+import { PeriodicTableComponent } from './periodic-table/periodic-table.component';
+import { AtomesComponent } from './atomes/atomes.component';
+
 
 const appRoutes: Routes = [{path: '', component: AccueilComponent},
-{path: 'drawing', component: DessinComponent},
+
 {path: 'formule', component: FormuleComponent},
+{path: 'atom', component: AtomesComponent },
 {path: 'nom', component: NameComponent},
 {path: 'cas', component: CasnumberComponent},
 { path: 'all', component: ElementsComponent },
@@ -41,7 +44,8 @@ const appRoutes: Routes = [{path: '', component: AccueilComponent},
     CasnumberComponent,
     NameComponent,
     FormuleComponent,
-    DessinComponent,
+    PeriodicTableComponent,
+    AtomesComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),
     BrowserModule, FormsModule
