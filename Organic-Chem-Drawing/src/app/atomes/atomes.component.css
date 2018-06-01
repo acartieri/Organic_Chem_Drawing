@@ -1,0 +1,28 @@
+.elem{
+    width: 60px;
+    height: 60px;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+}
+
+#tableau{
+
+    position: relative;
+    top: 20px;
+}
+
+#atdet{
+
+    position: relative;
+    top: 70px;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+    border: solid;
+    border-color : #fff;
+   
+}
+

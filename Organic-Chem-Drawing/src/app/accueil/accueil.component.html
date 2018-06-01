@@ -6,8 +6,9 @@
 
 <body>
 
-  <h1>Bienvenue sur DrawAmol</h1>
-  <p>Chercher une molécule selon ses différentes propriétés (nom, formule brute, n°CAS) et même à partir de sa structure moléculaire ! </p>
+  <h1>Welcome to SearchAmol</h1>
+  <p>
+    Looking for a molecule according to its different properties (name, formula, CAS number) and even from the element of the periodic table of elements! </p>
   <div id="list">
       <img id="all" [src]="'/assets/images/liste.png'" [routerLink]="['/all']"  width="300">
   </div>
@@ -19,7 +20,7 @@
         <img id="cas" [src]="'/assets/images/cas.png'" [routerLink]="['/cas']" width="300">
     </div>
     <div class="col">
-        <img id="mods" [src]="'/assets/images/modele.png'" width="300">
+        <img id="mods" [src]="'/assets/images/modele.png'" [routerLink]="['/atom']" width="300">
     </div>
     <div class="col">
         <img id="name" [src]="'/assets/images/nom.png'" [routerLink]="['/nom']" width="300">

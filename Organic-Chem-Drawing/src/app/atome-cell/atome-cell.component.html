@@ -1,0 +1,14 @@
+
+<div id="tableau" [ngClass]="select?'selected':'t'"  (click)="select=!select">
+ 
+  <div id="num">{{atome.numeroAtomique}}</div>
+  <div id="symb">
+  {{atome.symbole}}
+  </div>
+  <div id="mss">
+{{atome.masseAtomique|number : '1.2'}}</div>
+
+
+</div>
+
+

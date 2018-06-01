@@ -9,7 +9,6 @@ import { element } from 'protractor';
 })
 export class ElementDetailComponent implements OnInit {
 
-  //element = new Element('Benzene', 'C6H6', 78.11, 'liquide', 0.879);
 
   @Input() element: Element;
 

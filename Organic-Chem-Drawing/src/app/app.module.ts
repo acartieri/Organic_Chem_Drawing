@@ -17,11 +17,15 @@ import { NameComponent } from './name/name.component';
 import { FormuleComponent } from './formule/formule.component';
 import { PeriodicTableComponent } from './periodic-table/periodic-table.component';
 import { AtomesComponent } from './atomes/atomes.component';
+import { AtomeCellComponent } from './atome-cell/atome-cell.component';
+import { AtomeDetailsComponent } from './atome-details/atome-details.component';
+
 
 
 const appRoutes: Routes = [{path: '', component: AccueilComponent},
 
 {path: 'formule', component: FormuleComponent},
+{path: 'atomCell', component: AtomeCellComponent },
 {path: 'atom', component: AtomesComponent },
 {path: 'nom', component: NameComponent},
 {path: 'cas', component: CasnumberComponent},
@@ -46,6 +50,8 @@ const appRoutes: Routes = [{path: '', component: AccueilComponent},
     FormuleComponent,
     PeriodicTableComponent,
     AtomesComponent,
+    AtomeCellComponent,
+    AtomeDetailsComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),
     BrowserModule, FormsModule

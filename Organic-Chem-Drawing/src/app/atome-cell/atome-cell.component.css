@@ -1,0 +1,53 @@
+#tableau{
+    margin: 0 auto;
+}
+.selected{
+    background-color: rgb(235, 235, 235); 
+    color: #000000;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    cursor: pointer;
+    height: 100%;
+}
+
+.t:hover{
+    border:solid;
+    border-color: black;
+    background-color: rgb(250, 250, 250);
+    color: #000000;
+    transform: scale(1.08);
+}
+
+.t{
+    background-color: black;
+        color: #ffffff;
+    border: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: transform .3s;
+    height: 100%;
+}
+
+#num{
+    float: left;
+    width: 0%;
+    font-size: 12px;
+    position: relative;
+    left: 5px;
+    top: 2px;
+}
+
+#symb{
+
+    text-align: center;
+    position: relative;
+    bottom: -12px;
+    font-weight: bold;
+}
+
+#mss{
+    text-align: center;
+    position: relative;
+    bottom: -12px;
+    font-size: 10px;
+}

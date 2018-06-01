@@ -1,0 +1,26 @@
+#wesh{
+    background-color: rgb(39, 36, 36);
+    color: #fff;
+}
+
+#name{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top : 10px;
+}
+
+#discover, #cat, #app, #phase, #pf, #pe{
+
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+#résumé{
+    padding-top: 15px;
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-bottom: 15px;
+     font-size: 15px;
+     text-align: justify;
+}
