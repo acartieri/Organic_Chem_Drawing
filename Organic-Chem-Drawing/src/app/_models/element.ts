@@ -14,7 +14,7 @@ export class Element {
     public toxico: string;
     public id = 0;
 
-    constructor(nom = '',  formule = '', photo = '' , cas = '',
+    constructor(nom = '',  formule = '',  photo = '' , cas = '',
     masseMolaire = null , etatPhysique = '', densite = null,
     fusion = null, ebul = null, eclair = null, infla = null, toxico = '') {
         this.id = Element.count++;

@@ -19,6 +19,8 @@ import { PeriodicTableComponent } from './periodic-table/periodic-table.componen
 import { AtomesComponent } from './atomes/atomes.component';
 import { AtomeCellComponent } from './atome-cell/atome-cell.component';
 import { AtomeDetailsComponent } from './atome-details/atome-details.component';
+import { WebComponent } from './web/web.component';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 
@@ -52,9 +54,10 @@ const appRoutes: Routes = [{path: '', component: AccueilComponent},
     AtomesComponent,
     AtomeCellComponent,
     AtomeDetailsComponent,
+    WebComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule,
   ],
   providers: [ElementsService],
   bootstrap: [AppComponent]

@@ -11,20 +11,19 @@ import { ElementsService } from '../_service/elements.service';
 export class ElementsPageComponent implements OnInit {
 
   element;
-
   param: number;
 
-  constructor(private acivatedRoute: ActivatedRoute, private elementsService: ElementsService) { }
+  constructor(private activatedRoute: ActivatedRoute, private elementsService: ElementsService) { }
 
   ngOnInit() {
     // A partir de l'URL, on veut récupérer l'id et afficher les infos de l'élément chimique
-    this.acivatedRoute.params.subscribe(p => this.loadElement(p['id']));
+    this.activatedRoute.params.subscribe(p => this.loadElement(p['id']));
   }
 
   loadElement(id: string) {
-    this.param = +id;
-    this.element = this.elementsService.getElementById(this.param);
-  }
 
+    this.param = +id;
+    this.elementsService.get(this.param).subscribe(r => this.element = r);
+  }
 
 }

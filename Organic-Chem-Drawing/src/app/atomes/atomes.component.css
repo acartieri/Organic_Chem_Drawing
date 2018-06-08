@@ -10,8 +10,14 @@ h1{
 
 #tableau{
 
+    margin: 0 auto;
     position: relative;
     top: 20px;
+}
+
+#tabnom{
+    margin: 0 auto;
+    width: 50%;
 }
 
 #atdet{
@@ -21,8 +27,9 @@ h1{
     border-radius: 5px;
     width: 70%;
     margin: 0 auto;
-    border: solid;
-    border-color : #fff;
-   
+    list-style: none;
 }
 
+h4{
+    color: #fff;
+}

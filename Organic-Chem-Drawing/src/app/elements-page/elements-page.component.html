@@ -3,15 +3,15 @@
 <head>
 </head>
 
-<body>
+<body  *ngIf="element">
     
     
     <!--<div>{{param}}</div>-->
 
   
-        <h1 [innerHtml]=" (element.nom) +' ' + '('+(element.formule|chemical)+')'"></h1>
+      <h1 [innerHtml]=" (element.nom) +' ' + '('+(element.formule|chemical)+')'"></h1>
             
-     <div *ngIf="element">
+     <div>
             <div id="page">
      <div class="container">
             <div class="row">

@@ -23,8 +23,13 @@ export class FormuleComponent implements OnInit {
   constructor(private acivatedRoute: ActivatedRoute, private elementsService: ElementsService) { }
 
   ngOnInit() {
-    this.elements = this.elementsService.getElements();
+    this.elementsService.getAll().subscribe(r => this.getElements(r));
   }
+
+  getElements(r: Element[]) {
+
+    this.elements = r ;
+    }
 
   searchElement() {
 

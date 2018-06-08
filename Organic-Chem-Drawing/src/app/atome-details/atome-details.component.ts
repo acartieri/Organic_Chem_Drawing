@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Atome } from '../_models';
 
+
 @Component({
   selector: 'app-atome-details',
   templateUrl: './atome-details.component.html',
@@ -10,6 +11,9 @@ export class AtomeDetailsComponent implements OnInit {
 
 
   @Input() atome: Atome;
+
+
+  //atomList = [this.atome];
 
   constructor() { }
 

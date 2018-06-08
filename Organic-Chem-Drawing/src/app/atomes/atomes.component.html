@@ -6,40 +6,52 @@
 
 <h1>Tableau périodique des éléments</h1>
 
+  <div id="tabnom">
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th id="name" scope="col">Nom</th>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <li  *ngFor="let o of resultList"><a [routerLink]="['/element', o.id]">{{e.nom|uppercase}}</a></li>
+        </th>
+      </tbody>
+    </table>
+    </div>
+  
+
     <div class="container">
         <div class="row">
           <div class="col">
-               
-              <div id="atdet" *ngIf="selectedAtome!=null">
-                  <app-atome-details [atome]="selectedAtome"></app-atome-details>
-              </div> 
-  
+                <div id="atdet"  *ngIf="selectedAtome!=null">
+                        <h4>Atomes selectionnés</h4>
+                            <app-atome-details *ngFor="let i of atomList" [atome]="i"></app-atome-details>
+                        </div>
           </div>
           
           <div class="col">
 
-              <table id="tableau">
-                  <tbody>
-                    <tr *ngFor = 'let a of tab'>
-              
-                   <td id="element" *ngFor = 'let e of a' (click)="onSelected(e)"><div class="elem" *ngIf='e != null'><app-atome-cell [atome]="e"></app-atome-cell></div></td>
-                   
-              
-                    </tr>
-                    
-                  </tbody>
-                </table>
           
-              
+                <table id="tableau">
+
+                    
+                        <tbody>
+                          <tr *ngFor = 'let a of tab'>
+                    
+                         <td id="element" *ngFor = 'let e of a' (click)="onSelected(e)"><div class="elem" *ngIf='e != null'><app-atome-cell [atome]="e"></app-atome-cell></div></td>
+                         
+                    
+                          </tr>
+                          
+                        </tbody>
+                      </table>
         
         </div>
 
         </div>
       </div>
-      
-
-
- 
 
 </body>
 

@@ -25,22 +25,38 @@ export class ElementsComponent implements OnInit {
     new Element('Pyridine', 'C5H5N', 79.10, 'liquide', 0.983),
     new Element('Pyrrole', 'C4H5N', 67.09, 'liquide', 0.970)];
     */
-  elements;
-
-  element = new Element();
+  elements = [];
 
   selectedElement: Element;
 
-  constructor(private acivatedRoute: ActivatedRoute, private elementsService: ElementsService) { }
+  constructor(private activatedRoute: ActivatedRoute, private elementsService: ElementsService) { }
+
+
+
+  ngOnInit() {
+    this.elementsService.getAll().subscribe(r => this.getElements(r));
+    //this.elementsService.get(id).subscribe(a => this.getElementById(a));
+    //this.activatedRoute.params.subscribe(a => this.elements = a['id']);
+
+  }
+
+  getElements(r: Element[]) {
+
+  this.elements = r ;
+  }
+
+/*
+  getElementById(a: Element[]) {
+  this.elements = a ;
+  }
+
 
   onSelected(e: Element): void {
     this.selectedElement = e;
   }
 
-  ngOnInit() {
-    this.elements = this.elementsService.getElements();
-  }
-
+*/
+/*
   addElement() {
     this.elements.push(this.element);
     this.element = new Element();
@@ -56,5 +72,6 @@ export class ElementsComponent implements OnInit {
     this.edit = false;
     this.element = new Element;
   }
+  */
 
 }
